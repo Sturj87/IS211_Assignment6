@@ -1,13 +1,43 @@
+## IS211 A#6 SAAR TURJEMAN
 
-def convertCelsiusToKelvin(celsius):
-    """Takes in a float representing a Celsius measurement, and returns that temperature converted into Kelvins"""
-    kelvins = 0
-    
-    return kelvins
+def convertCelsiusToKelvin(degrees):
+    """ This function converts from Celsius to Kelvin.
+   """
+    kelvin = degrees + 273.15
+    return kelvin
 
 
-def convertCelsiusToFahrenheit(celsius):
-    """Takes in a float representing a Celsius measurement, and returns that temperature converted into Fahrenheit"""
-    fahrenheit = 0
-    
-    return fahrenheit
+def convertCelsiusToFahrenheit(degrees):
+    """This function converts from Celsius to Fahrenheit.
+    """
+    Fahrenheit = (degrees * 1.8) + 32
+    return Fahrenheit
+
+
+def convertFahrenheitToCelsius(degrees):
+    """This function converts from Fahrenheit to Celsius.
+    """
+    Celsius = (degrees - 32.0) * 5./9
+    return Celsius
+
+
+def convertFahrenheitToKelvin(degrees):
+    """This function converts from Fahrenheit to Kelvin.
+
+    """
+    Kelvin = ((degrees + 459.67) * 5 / 9)
+    return Kelvin
+
+def convertKelvinToCelsius(degrees):
+    """This function converts from Kelvin to Celsius.
+    """
+    Celsius = degrees - 273.15
+    return Celsius
+
+
+def convertKelvinToFahrenheit(degrees):
+    """This function converts from Kelvin to Fahrenheit.
+    """
+    Fahrenheit_KC = convertKelvinToCelsius(degrees)
+    Fahrenheit = convertCelsiusToFahrenheit(Fahrenheit_KC)
+    return Fahrenheit
